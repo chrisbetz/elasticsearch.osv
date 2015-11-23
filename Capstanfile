@@ -1,0 +1,8 @@
+base: cloudius/osv-openjdk8
+cmdline: /java.so -Xms256m -Xmx1g -Xss256k -Djava.awt.headless=true -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -Delasticsearch -Des.foreground=yes -Des.path.home=/ -Des.insecure.allow.root=true -Des.security.manager.enabled=false -cp /elasticsearch.jar:/lib/* org.elasticsearch.bootstrap.Elasticsearch start
+files:
+  /elasticsearch.jar: ./elasticsearch-2.0.0/lib/elasticsearch-2.0.0.jar
+  /config/elasticsearch.yml: ./config/elasticsearch.yml
+  /config/logging.yml: ./config/logging.yml
+  /usr/mgmt/local-init.yaml: local-init.yaml
+  /init/00-cmdline: cmdline
