@@ -53,7 +53,7 @@ cluster.name: logmon
 #
 #network.host: 0.0.0.0
 network.bind_host: 0.0.0.0
-network.publish_host: _eth1_
+network.publish_host: _eth0_
 #
 # Set a custom port for HTTP:
 #
